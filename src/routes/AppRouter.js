@@ -2,7 +2,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import TodoActive from "../components/TodoActive";
@@ -22,6 +23,8 @@ export default function AppRouter() {
             <Route exact path="/" component={TodoAll}></Route>
             <Route exact path="/active" component={TodoActive}></Route>
             <Route exact path="/completed" component={TodoCompleted}></Route>
+
+            <Redirect to='/' />
             </Switch>
 
         </div>
