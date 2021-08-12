@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {  useEffect, useReducer } from 'react';
+import AppRouter from './routes/AppRouter';
+import { todoContext } from './todoContext';
+import { todoReducer } from './todoReducer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const init = () => JSON.parse(localStorage.getItem('todos')) || [];
+
+const App = () => {
+
+    const [state, dispatch] = useReducer(todoReducer, [], init);
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(state));
+    }, [state])
+ 
+    return (
+        <todoContext.Provider value={{state, dispatch}}>
+            <AppRouter />
+        </todoContext.Provider>
+    )
 }
 
 export default App;

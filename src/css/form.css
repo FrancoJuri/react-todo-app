@@ -1,0 +1,56 @@
+:root {
+    --main-font: 'Quicksand';
+    --main-color: #2F80ED;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+input{
+    width: 80% !important;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: var(--main-font);
+    outline: none;
+    border: 1px solid gray;
+}
+
+button{
+    color: white;
+    font-family: var(--main-font);
+    font-size: 21px;
+    box-shadow: 2px 2px 13px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 13px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 13px -6px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    background-color: var(--main-color);
+    border: none;
+    width: 15%;
+    transition: all 300ms;
+}
+
+button:hover{
+    filter: brightness(93%);
+}
+
+button:active{
+    filter: brightness(80%);
+}
+
+@media(max-width: 456px){
+    input{
+        width: 65% !important;
+    }
+    button{
+        width: 30% !important;
+    }
+}
+
+@media(max-width: 345px){
+    button{
+        width: 28% !important;
+    }
+}
