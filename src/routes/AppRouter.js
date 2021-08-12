@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect
@@ -21,8 +21,8 @@ export default function AppRouter() {
 
             <Switch>
             <Route exact path="/" component={TodoAll}></Route>
-            <Route path="/active" component={TodoActive}></Route>
-            <Route path="/completed" component={TodoCompleted}></Route>
+            <Route exact path="/active" component={TodoActive}></Route>
+            <Route exact path="/completed" component={TodoCompleted}></Route>
 
             <Redirect to='/' />
             </Switch>
