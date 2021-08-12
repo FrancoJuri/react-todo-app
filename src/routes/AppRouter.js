@@ -5,6 +5,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import TodoActive from "../components/TodoActive";
 import TodoAll from "../components/TodoAll";
@@ -28,6 +29,7 @@ export default function AppRouter() {
             </Switch>
 
         </div>
+        <Footer />
     </Router>
   );
 }

@@ -3,6 +3,38 @@ body{
     margin: 0px;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    padding-bottom: 75px;
+}
+
+body::-webkit-scrollbar {
+    width: 9px;    
+    height: 8px; 
+    display: block; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(151, 151, 151);
+    border-radius: 4px;
+}
+
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }
 
 :root {
@@ -85,6 +117,18 @@ svg:hover{
 .no-tasks h3{
     font-family: var(--main-font);
     font-size: 33px;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    justify-content: center;
+}
+
+footer h3{
+    font-family: var(--main-font);
 }
 
 
