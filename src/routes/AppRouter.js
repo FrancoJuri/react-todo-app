@@ -15,11 +15,9 @@ import '../css/index.css';
 export default function AppRouter() {
   return (
     <Router>
-
         <div className='container'>
 
             <NavBar />
-
             <Switch>
             <Route exact path="/" component={TodoAll}></Route>
             <Route exact path="/active" component={TodoActive}></Route>

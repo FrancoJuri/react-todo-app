@@ -3,7 +3,6 @@ body{
     margin: 0px;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    padding-bottom: 75px;
 }
 
 body::-webkit-scrollbar {
@@ -48,6 +47,7 @@ h1{
 
 .container{
     width: 40% !important;
+    min-height: calc(95vh - 90px);
 }
 
 ul{
@@ -121,16 +121,15 @@ svg:hover{
 
 footer{
     display: flex;
-    position: fixed;
     width: 100%;
-    bottom: 0px;
     justify-content: center;
+    height: 40px;
+    margin-top: 50px;
 }
 
 footer h3{
     font-family: var(--main-font);
 }
-
 
 @media(max-width: 1243px){
     .container{
